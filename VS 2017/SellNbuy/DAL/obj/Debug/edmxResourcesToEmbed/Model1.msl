@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SellNbuyModelStoreContainer" CdmEntityContainer="SellNbuyEntities">
+    <EntitySetMapping Name="classifieds">
+      <EntityTypeMapping TypeName="SellNbuyModel.classified">
+        <MappingFragment StoreEntitySet="classifieds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="communities">
+      <EntityTypeMapping TypeName="SellNbuyModel.community">
+        <MappingFragment StoreEntitySet="community">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs">
+      <EntityTypeMapping TypeName="SellNbuyModel.job">
+        <MappingFragment StoreEntitySet="job">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="motors">
+      <EntityTypeMapping TypeName="SellNbuyModel.motor">
+        <MappingFragment StoreEntitySet="motor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="properties">
+      <EntityTypeMapping TypeName="SellNbuyModel.property">
+        <MappingFragment StoreEntitySet="property">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="classifiedsInsert" FunctionName="SellNbuyModel.Store.classifiedsInsert" />
+    <FunctionImportMapping FunctionImportName="communityInsert" FunctionName="SellNbuyModel.Store.communityInsert" />
+    <FunctionImportMapping FunctionImportName="JobInsert" FunctionName="SellNbuyModel.Store.JobInsert" />
+    <FunctionImportMapping FunctionImportName="MotorInsert" FunctionName="SellNbuyModel.Store.MotorInsert" />
+    <FunctionImportMapping FunctionImportName="PropInsert" FunctionName="SellNbuyModel.Store.PropInsert" />
+    <EntitySetMapping Name="userInfoes">
+      <EntityTypeMapping TypeName="SellNbuyModel.userInfo">
+        <MappingFragment StoreEntitySet="userInfo">
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="userInsert" FunctionName="SellNbuyModel.Store.userInsert" />
+    <FunctionImportMapping FunctionImportName="LoginCheck" FunctionName="SellNbuyModel.Store.LoginCheck" />
+    <EntitySetMapping Name="pro_motor">
+      <EntityTypeMapping TypeName="SellNbuyModel.pro_motor">
+        <MappingFragment StoreEntitySet="pro_motor">
+          <ScalarProperty Name="checkbox" ColumnName="checkbox" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="fuel" ColumnName="fuel" />
+          <ScalarProperty Name="engine" ColumnName="engine" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="km" ColumnName="km" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="fk_cat_id" ColumnName="fk_cat_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetMotorCat" FunctionName="SellNbuyModel.Store.GetMotorCat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SellNbuyModel.GetMotorCat_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Pro_Motor_Insert" FunctionName="SellNbuyModel.Store.Pro_Motor_Insert" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellNbuy", "SellNbuy\SellNbuy.csproj", "{E9B79757-AFA9-4849-B94E-F1BEF99DB04F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{15F72D4D-9EF7-45AA-8A8A-109AC4AF5EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{596430FE-6212-48D7-AF31-2A222941989A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9B79757-AFA9-4849-B94E-F1BEF99DB04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B79757-AFA9-4849-B94E-F1BEF99DB04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B79757-AFA9-4849-B94E-F1BEF99DB04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B79757-AFA9-4849-B94E-F1BEF99DB04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F72D4D-9EF7-45AA-8A8A-109AC4AF5EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F72D4D-9EF7-45AA-8A8A-109AC4AF5EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F72D4D-9EF7-45AA-8A8A-109AC4AF5EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F72D4D-9EF7-45AA-8A8A-109AC4AF5EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596430FE-6212-48D7-AF31-2A222941989A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596430FE-6212-48D7-AF31-2A222941989A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596430FE-6212-48D7-AF31-2A222941989A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596430FE-6212-48D7-AF31-2A222941989A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

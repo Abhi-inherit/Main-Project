@@ -1,0 +1,138 @@
+﻿@model BLL.Models.EntyMotors
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<div style="position:absolute; margin-left:340px; width:500px; height:auto; background-color:#abb6c9;">
+    <div style="margin:20px;">
+        @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Motor Category</legend>
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.cat)
+        </div>*@
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cat)
+            @Html.ValidationMessageFor(model => model.cat)
+            &nbsp;
+            @ViewBag.Res
+        </div>
+        <p>
+            <input type="submit" value="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="@Url.Action("Ctaegory_Edit_Delete", "Admin")" class="account"><span>Edit & Delete</span></a>
+        </p>
+    </fieldset>
+}
+    </div>
+</div>
+<br />
+<br />
+<div style="position:absolute; margin-top:160px; margin-left:340px; width:500px; height:auto; background-color:#abb6c9;">
+    <div style="margin:20px;">
+        @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Job Category</legend>
+       @* <div class="editor-label">
+            @Html.LabelFor(model => model.Job_Cat)
+        </div>*@
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Job_Cat)
+            @Html.ValidationMessageFor(model => model.Job_Cat)
+            &nbsp;
+            @ViewBag.Result
+        </div>
+        <p>
+            <input type="submit" value="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="@Url.Action("Login", "Users")" class="account"><span>Edit & Delete</span></a>
+        </p>
+    </fieldset>
+}
+    </div>
+</div>
+
+<br />
+<br />
+
+<div style="position:absolute; margin-top:320px; margin-left:340px; width:500px; height:auto; background-color:#abb6c9;">
+    <div style="margin:20px;">
+        @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Property Category</legend>
+       @* <div class="editor-label">
+            @Html.LabelFor(model => model.Pro_Cat)
+        </div>*@
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pro_Cat)
+            @Html.ValidationMessageFor(model => model.Pro_Cat)
+            &nbsp;
+            @ViewBag.pro
+        </div>
+        <p>
+            <input type="submit" value="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="@Url.Action("Login", "Users")" class="account"><span>Edit & Delete</span></a>
+        </p>
+    </fieldset>
+}
+    </div>
+</div>
+
+<div style="position:absolute; margin-left:860px; margin-top:-80px; width:500px; height:auto; background-color:#abb6c9;">
+    <div style="margin:20px;">
+        @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Community Category</legend>
+       @* <div class="editor-label">
+            @Html.LabelFor(model => model.Pro_Cat)
+        </div>*@
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Community_Cat)
+            @Html.ValidationMessageFor(model => model.Community_Cat)
+            &nbsp;
+            @ViewBag.Community
+        </div>
+        <p>
+            <input type="submit" value="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="@Url.Action("Login", "Users")" class="account"><span>Edit & Delete</span></a>
+        </p>
+    </fieldset>
+}
+    </div>
+</div>
+
+<div style="position:absolute; margin-left:860px; margin-top:120px;  width:500px; height:auto; background-color:#abb6c9;">
+    <div style="margin:20px;">
+        @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Classifieds Category</legend>
+       @* <div class="editor-label">
+            @Html.LabelFor(model => model.Pro_Cat)
+        </div>*@
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Classifieds_Cat)
+            @Html.ValidationMessageFor(model => model.Classifieds_Cat)
+            &nbsp;
+            @ViewBag.Classifieds
+        </div>
+        <p>
+            <input type="submit" value="Add" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="@Url.Action("Login", "Users")" class="account"><span>Edit & Delete</span></a>
+        </p>
+    </fieldset>
+}
+    </div>
+</div>

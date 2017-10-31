@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SellNbuyModelStoreContainer" CdmEntityContainer="SellNbuyEntities">
+    <EntitySetMapping Name="classifieds">
+      <EntityTypeMapping TypeName="SellNbuyModel.classified">
+        <MappingFragment StoreEntitySet="classifieds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="communities">
+      <EntityTypeMapping TypeName="SellNbuyModel.community">
+        <MappingFragment StoreEntitySet="community">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs">
+      <EntityTypeMapping TypeName="SellNbuyModel.job">
+        <MappingFragment StoreEntitySet="job">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="motors">
+      <EntityTypeMapping TypeName="SellNbuyModel.motor">
+        <MappingFragment StoreEntitySet="motor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="properties">
+      <EntityTypeMapping TypeName="SellNbuyModel.property">
+        <MappingFragment StoreEntitySet="property">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="JobInsert" FunctionName="SellNbuyModel.Store.JobInsert" />
+    <FunctionImportMapping FunctionImportName="MotorInsert" FunctionName="SellNbuyModel.Store.MotorInsert" />
+    <FunctionImportMapping FunctionImportName="PropInsert" FunctionName="SellNbuyModel.Store.PropInsert" />
+  </EntityContainerMapping>
+</Mapping>

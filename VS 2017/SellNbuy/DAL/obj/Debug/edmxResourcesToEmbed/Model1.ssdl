@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SellNbuyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="classifieds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="community">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="job">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="motor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pro_motor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_cat_id" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="company" Type="varchar" MaxLength="100" />
+    <Property Name="photo" Type="varchar" MaxLength="100" />
+    <Property Name="km" Type="int" />
+    <Property Name="year" Type="int" />
+    <Property Name="body" Type="varchar" MaxLength="100" />
+    <Property Name="engine" Type="varchar" MaxLength="100" />
+    <Property Name="fuel" Type="varchar" MaxLength="100" />
+    <Property Name="hp" Type="varchar" MaxLength="100" />
+    <Property Name="phoneno" Type="varchar" MaxLength="100" />
+    <Property Name="price" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+    <Property Name="location" Type="varchar" MaxLength="100" />
+    <Property Name="checkbox" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="property">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="userInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phoneno" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Function Name="classifiedsInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="communityInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetMotorCat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="JobInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="LoginCheck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mail" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MotorInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Pro_Motor_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fk_cat_id" Type="int" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="company" Type="varchar" Mode="In" />
+    <Parameter Name="photo" Type="varchar" Mode="In" />
+    <Parameter Name="km" Type="int" Mode="In" />
+    <Parameter Name="year" Type="int" Mode="In" />
+    <Parameter Name="body" Type="varchar" Mode="In" />
+    <Parameter Name="engine" Type="varchar" Mode="In" />
+    <Parameter Name="fuel" Type="varchar" Mode="In" />
+    <Parameter Name="hp" Type="varchar" Mode="In" />
+    <Parameter Name="phoneno" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="varchar" Mode="In" />
+    <Parameter Name="description" Type="varchar" Mode="In" />
+    <Parameter Name="location" Type="varchar" Mode="In" />
+    <Parameter Name="checkbox" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PropInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cat" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="userInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="mail" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+    <Parameter Name="phoneno" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="SellNbuyModelStoreContainer">
+    <EntitySet Name="classifieds" EntityType="Self.classifieds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="community" EntityType="Self.community" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="job" EntityType="Self.job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="motor" EntityType="Self.motor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pro_motor" EntityType="Self.pro_motor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="property" EntityType="Self.property" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userInfo" EntityType="Self.userInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

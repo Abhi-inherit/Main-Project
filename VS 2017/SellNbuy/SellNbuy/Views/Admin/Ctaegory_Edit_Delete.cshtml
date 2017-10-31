@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BLL.Models.EntyMotors>
+
+@{
+    ViewBag.Title = "Ctaegory_Edit_Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ctaegory_Edit_Delete</h2>
+
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Action
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.HiddenFor(model => item.Id)
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cat)
+            </td>
+            <td>
+                <input type="button" id="Edit" value="Edit" onclick="Edit(@item.Id)" />
+            </td>
+            <td>
+                <input type="button" id="Delete" value="Delete" onclick="Delete(@item.Id)" />
+            </td>
+            <td>
+                <input type="button" id="View" value="Details" onclick="View(@item.Id)" />
+            </td>
+        </tr>
+    }
+
+</table>

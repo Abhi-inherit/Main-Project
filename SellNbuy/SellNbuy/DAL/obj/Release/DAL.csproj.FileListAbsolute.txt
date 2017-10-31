@@ -1,0 +1,7 @@
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\bin\Release\DAL.dll.config
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\bin\Release\DAL.dll
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\bin\Release\DAL.pdb
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\bin\Release\EntityFramework.dll
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\bin\Release\EntityFramework.xml
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\obj\Release\DAL.dll
+C:\Users\HP\Desktop\Abhi\Main Project\SellNbuy\SellNbuy\DAL\obj\Release\DAL.pdb

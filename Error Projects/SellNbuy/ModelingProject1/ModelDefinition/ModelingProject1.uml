@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="b5ce62cb-05bd-4dab-8461-3801e45a2abc"
+  name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="5ac9e860-e32b-404d-9ff3-4c76d2fb735e">
+      <profileInstance
+        Id="8fe2e880-3276-4199-a218-e612f780ea39"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="0dee5094-c1a5-434a-af9f-2641d9e3169e"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="91aff281-c1a9-4add-82c3-4afd3ee74546"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dccae30c-fd6a-46dd-9dc9-182f26afe083"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="5b6592f6-6d28-4852-b215-b78b4218fcc0"
+                  LastKnownName="Buyer or viewer"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="168fdbfd-f48e-4de7-887e-a8be27dcd64c"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="8cdcc540-1ae5-4d98-bb8f-8838d3e145aa"
+                  LastKnownName="Admin"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6c376253-529e-437f-88b0-cd18d0d9f527"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="0f91398f-f0c0-4131-a318-3edba1372f44"
+                  LastKnownName="Seller"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <callOperationAction
+            Id="5b6592f6-6d28-4852-b215-b78b4218fcc0"
+            name="Buyer or viewer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1224758e-c67b-4851-bcd0-8b0dcf91c2c3"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="2dd56254-c2b1-46dd-bb4a-52388bb169b2"
+                  LastKnownName="Select Category"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callBehaviorAction
+            Id="0f91398f-f0c0-4131-a318-3edba1372f44"
+            name="Seller"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="35601fc6-c44f-49bc-96d8-c591766913e8"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="5b490c92-11ec-4ea5-bb36-51b0f40c3a34"
+                  LastKnownName="User Registeration"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
+          <callOperationAction
+            Id="8cdcc540-1ae5-4d98-bb8f-8838d3e145aa"
+            name="Admin"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c4f2d0b9-d3fb-47e9-9f1e-fae04ff25b5d"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="1e5221fd-1a1f-4b67-a8ff-b30fe977684e"
+                  LastKnownName="View Products"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="79e62d26-19bc-4dec-82a1-9fba576c55e1"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="8f6eae3f-66ab-4a17-bbcc-abde8dba2465"
+                  LastKnownName="View User"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="7bcb1efd-cd5e-4a7a-ab7f-926cee025fb4"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="61ffe37c-7909-413d-826d-b7ed12c3f5cf"
+                  LastKnownName="View feedback"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0f9e7fa6-c045-4df0-be6c-2dee3b245230"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="c464623b-a79c-4a41-8713-3b783dfee05b"
+                  LastKnownName="View Spam"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="2dd56254-c2b1-46dd-bb4a-52388bb169b2"
+            name="Select Category"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f86e2678-340e-4286-bef3-6d5d2dde4336"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="f4485209-da5b-4b51-8c76-7cf4bc93939a"
+                  LastKnownName="Select Sub Category"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="5b490c92-11ec-4ea5-bb36-51b0f40c3a34"
+            name="User Registeration"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b858c31f-1fde-41db-8c37-4bda5f489ebc"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="653eaa6f-8712-4a12-8500-eaee46598d3b"
+                  LastKnownName="Chat with sellers"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="aca59d2a-c3ff-4225-83a4-660dc75509e0"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="f9da347d-fed1-4994-8c4f-8a41da62cb40"
+                  LastKnownName="Terms and condition"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="f4485209-da5b-4b51-8c76-7cf4bc93939a"
+            name="Select Sub Category"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="c33b78c3-6adf-4a0a-aedb-cc467d451d57"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="3945b172-7e12-4c86-85ab-3bc79bbdf2f1"
+                  LastKnownName="Viewer or Buyer"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="07baa550-2ab8-4b8a-a506-51d63ff5921b"
+            name="Search"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0959cbc6-3c72-4924-ace5-924ff7a0eb09"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="c4eb8086-d612-470d-bdff-0b9ccdea45bf"
+                  LastKnownName="View Product"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="c4eb8086-d612-470d-bdff-0b9ccdea45bf"
+            name="View Product"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1a68ff78-1059-439c-894d-7bde1d67efcc"
+                isLeaf="false">
+                <callOperationActionMoniker
+                  Id="a93e325a-699c-49ff-baf6-2fb550a12c28"
+                  LastKnownName="Choose Product and get details"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="a93e325a-699c-49ff-baf6-2fb550a12c28"
+            name="Choose Product and get details"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="60929ea6-270c-40f7-beeb-0191816c4f4c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="700a2c33-95d7-4b7e-ac14-9bf2d9d2e9de"
+                  LastKnownName="Check user details"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="653eaa6f-8712-4a12-8500-eaee46598d3b"
+            name="Chat with sellers"
+            isLeaf="false" />
+          <objectNode
+            Id="06b02900-e521-45c7-acb8-f673d5302ccf"
+            name="NO"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="301e05d1-968a-402a-bde7-f2467bdaf2ee"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <callOperationActionMoniker
+                  Id="5b490c92-11ec-4ea5-bb36-51b0f40c3a34"
+                  LastKnownName="User Registeration"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="ed4c1969-840f-409a-aba7-b14061c2e2d8"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="df5e3e84-2e21-4e8b-ac7d-8bbea6629daa"
+            name="Yes"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="ca46e39b-f459-45b2-8c26-ce1e78bf201f"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <callOperationActionMoniker
+                  Id="653eaa6f-8712-4a12-8500-eaee46598d3b"
+                  LastKnownName="Chat with sellers"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="c848ad22-2636-4ccf-bfe1-52cbd65cdeb0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="aeb2b8f4-a5e5-4917-a2f1-3849034b6d30"
+            name="Add Products"
+            isLeaf="false" />
+          <objectNode
+            Id="3945b172-7e12-4c86-85ab-3bc79bbdf2f1"
+            name="Viewer or Buyer"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="fa53093a-59e3-4920-a0ed-f08bf4b96d32"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <callOperationActionMoniker
+                  Id="07baa550-2ab8-4b8a-a506-51d63ff5921b"
+                  LastKnownName="Search"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="ca26dd5b-e480-41a8-abd3-b413f06185b3"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="700a2c33-95d7-4b7e-ac14-9bf2d9d2e9de"
+            name="Check user details"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="872b7726-1740-44db-8fab-2247c52335aa"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="06b02900-e521-45c7-acb8-f673d5302ccf"
+                  LastKnownName="NO"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="ed62571f-c89e-434e-8117-aa821730096c"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="df5e3e84-2e21-4e8b-ac7d-8bbea6629daa"
+                  LastKnownName="Yes"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <callOperationAction
+            Id="1e5221fd-1a1f-4b67-a8ff-b30fe977684e"
+            name="View Products"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="7f9ffaf5-ad05-4ba3-9068-a39eefc9ecd1"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="efcf921e-e86c-4989-b241-4b4ac0d58ee8"
+                  LastKnownName="Edit"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="8da04ba0-afb2-48a4-a5b8-8a7cd05cd6e5"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="d566fad0-4add-4292-b2b1-76fc078fae54"
+                  LastKnownName="Delete"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode
+            Id="efcf921e-e86c-4989-b241-4b4ac0d58ee8"
+            name="Edit"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="96e6d00e-3209-4527-b7af-b90db9615566"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="d566fad0-4add-4292-b2b1-76fc078fae54"
+            name="Delete"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="3c55ad20-0b39-4487-8244-4f43e6dd6308"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="8f6eae3f-66ab-4a17-bbcc-abde8dba2465"
+            name="View User"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="87fb60be-9284-46c1-b1e0-8d1b8d8eb00a"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="efcf921e-e86c-4989-b241-4b4ac0d58ee8"
+                  LastKnownName="Edit"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="1656083c-7687-42c1-9698-bc511d952c8b"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="d566fad0-4add-4292-b2b1-76fc078fae54"
+                  LastKnownName="Delete"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <callOperationAction
+            Id="61ffe37c-7909-413d-826d-b7ed12c3f5cf"
+            name="View feedback"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="92401f65-dd9d-4f32-a746-155749f8bd95"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="efcf921e-e86c-4989-b241-4b4ac0d58ee8"
+                  LastKnownName="Edit"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="fedfb181-1f4b-4163-8bc4-ae959fec6b35"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="d566fad0-4add-4292-b2b1-76fc078fae54"
+                  LastKnownName="Delete"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="6550b760-dcd7-472a-b991-8bd62585f358"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="ea714c4e-a3e6-46b7-836b-06909cbfb675"
+                  LastKnownName="Replay"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode
+            Id="ea714c4e-a3e6-46b7-836b-06909cbfb675"
+            name="Replay"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="c4c16d56-225e-4995-ab03-b34f67242d66"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callOperationAction
+            Id="c464623b-a79c-4a41-8713-3b783dfee05b"
+            name="View Spam"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="99f6b318-86b7-4184-a954-b5973a076072"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="27cc01aa-5a19-4da2-9c57-f441d149c8be"
+                  LastKnownName="Delete or block User"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode
+            Id="27cc01aa-5a19-4da2-9c57-f441d149c8be"
+            name="Delete or block User"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="675caf8f-aa70-4734-81d9-0d3699bb2402"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <callOperationActionMoniker
+                  Id="8f6eae3f-66ab-4a17-bbcc-abde8dba2465"
+                  LastKnownName="View User"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="80bb3e2f-32a6-4e2e-ba89-c98683b31265"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <callBehaviorAction
+            Id="f9da347d-fed1-4994-8c4f-8a41da62cb40"
+            name="Terms and condition"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="6b7586eb-35c9-4232-9b11-c69f2007d293"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="8e76b51f-2e54-47f8-a872-92f34021b3eb"
+                  LastKnownName="Yes"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callBehaviorAction>
+          <objectNode
+            Id="8e76b51f-2e54-47f8-a872-92f34021b3eb"
+            name="Yes"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="44a97e5e-79c5-4437-811c-d7c86de6b807"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <callOperationActionMoniker
+                  Id="aeb2b8f4-a5e5-4917-a2f1-3849034b6d30"
+                  LastKnownName="Add Products"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="8bb3d2c2-c0f5-4dbd-b55f-4f9daf18b172"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

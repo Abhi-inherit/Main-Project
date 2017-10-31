@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SellNbuyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="classifieds">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="community">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="job">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="motor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pro_motor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fk_cat_id" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="100" />
+          <Property Name="company" Type="varchar" MaxLength="100" />
+          <Property Name="photo" Type="varchar" MaxLength="100" />
+          <Property Name="km" Type="int" />
+          <Property Name="year" Type="int" />
+          <Property Name="body" Type="varchar" MaxLength="100" />
+          <Property Name="engine" Type="varchar" MaxLength="100" />
+          <Property Name="fuel" Type="varchar" MaxLength="100" />
+          <Property Name="hp" Type="varchar" MaxLength="100" />
+          <Property Name="phoneno" Type="varchar" MaxLength="100" />
+          <Property Name="price" Type="varchar" MaxLength="100" />
+          <Property Name="description" Type="varchar" MaxLength="1000" />
+          <Property Name="location" Type="varchar" MaxLength="100" />
+          <Property Name="checkbox" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="property">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="userInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phoneno" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="classifiedsInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cat" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="communityInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cat" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetMotorCat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="JobInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cat" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="LoginCheck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mail" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MotorInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cat" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Pro_Motor_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fk_cat_id" Type="int" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="company" Type="varchar" Mode="In" />
+          <Parameter Name="photo" Type="varchar" Mode="In" />
+          <Parameter Name="km" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="body" Type="varchar" Mode="In" />
+          <Parameter Name="engine" Type="varchar" Mode="In" />
+          <Parameter Name="fuel" Type="varchar" Mode="In" />
+          <Parameter Name="hp" Type="varchar" Mode="In" />
+          <Parameter Name="phoneno" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="varchar" Mode="In" />
+          <Parameter Name="location" Type="varchar" Mode="In" />
+          <Parameter Name="checkbox" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PropInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cat" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="userInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="mail" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="phoneno" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="SellNbuyModelStoreContainer">
+          <EntitySet Name="classifieds" EntityType="Self.classifieds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="community" EntityType="Self.community" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="job" EntityType="Self.job" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="motor" EntityType="Self.motor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pro_motor" EntityType="Self.pro_motor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="property" EntityType="Self.property" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userInfo" EntityType="Self.userInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SellNbuyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="classified">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="community">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="job">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="motor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="property">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SellNbuyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="classifieds" EntityType="Self.classified" />
+          <EntitySet Name="communities" EntityType="Self.community" />
+          <EntitySet Name="jobs" EntityType="Self.job" />
+          <EntitySet Name="motors" EntityType="Self.motor" />
+          <EntitySet Name="properties" EntityType="Self.property" />
+          <FunctionImport Name="classifiedsInsert" ReturnType="Collection(String)">
+          <Parameter Name="cat" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="communityInsert" ReturnType="Collection(String)">
+          <Parameter Name="cat" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="JobInsert" ReturnType="Collection(String)">
+          <Parameter Name="cat" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MotorInsert" ReturnType="Collection(String)">
+          <Parameter Name="cat" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PropInsert" ReturnType="Collection(String)">
+          <Parameter Name="cat" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="userInfoes" EntityType="SellNbuyModel.userInfo" />
+          <FunctionImport Name="userInsert" ReturnType="Collection(String)">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="mail" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="LoginCheck" ReturnType="Collection(String)">
+            <Parameter Name="mail" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="pro_motor" EntityType="SellNbuyModel.pro_motor" />
+          <FunctionImport Name="GetMotorCat" ReturnType="Collection(SellNbuyModel.GetMotorCat_Result)" />
+          <FunctionImport Name="Pro_Motor_Insert" ReturnType="Collection(String)">
+            <Parameter Name="fk_cat_id" Mode="In" Type="Int32" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="company" Mode="In" Type="String" />
+            <Parameter Name="photo" Mode="In" Type="String" />
+            <Parameter Name="km" Mode="In" Type="Int32" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+            <Parameter Name="body" Mode="In" Type="String" />
+            <Parameter Name="engine" Mode="In" Type="String" />
+            <Parameter Name="fuel" Mode="In" Type="String" />
+            <Parameter Name="hp" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="location" Mode="In" Type="String" />
+            <Parameter Name="checkbox" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="userInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phoneno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pro_motor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fk_cat_id" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="company" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="photo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="km" Type="Int32" />
+          <Property Name="year" Type="Int32" />
+          <Property Name="body" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="engine" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fuel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="hp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="phoneno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="checkbox" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="GetMotorCat_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="cat" Nullable="false" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SellNbuyModelStoreContainer" CdmEntityContainer="SellNbuyEntities">
+          <EntitySetMapping Name="classifieds">
+            <EntityTypeMapping TypeName="SellNbuyModel.classified">
+              <MappingFragment StoreEntitySet="classifieds">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="communities">
+            <EntityTypeMapping TypeName="SellNbuyModel.community">
+              <MappingFragment StoreEntitySet="community">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="jobs">
+            <EntityTypeMapping TypeName="SellNbuyModel.job">
+              <MappingFragment StoreEntitySet="job">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="motors">
+            <EntityTypeMapping TypeName="SellNbuyModel.motor">
+              <MappingFragment StoreEntitySet="motor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="properties">
+            <EntityTypeMapping TypeName="SellNbuyModel.property">
+              <MappingFragment StoreEntitySet="property">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="classifiedsInsert" FunctionName="SellNbuyModel.Store.classifiedsInsert" />
+          <FunctionImportMapping FunctionImportName="communityInsert" FunctionName="SellNbuyModel.Store.communityInsert" />
+          <FunctionImportMapping FunctionImportName="JobInsert" FunctionName="SellNbuyModel.Store.JobInsert" />
+          <FunctionImportMapping FunctionImportName="MotorInsert" FunctionName="SellNbuyModel.Store.MotorInsert" />
+          <FunctionImportMapping FunctionImportName="PropInsert" FunctionName="SellNbuyModel.Store.PropInsert" />
+          <EntitySetMapping Name="userInfoes">
+            <EntityTypeMapping TypeName="SellNbuyModel.userInfo">
+              <MappingFragment StoreEntitySet="userInfo">
+                <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="userInsert" FunctionName="SellNbuyModel.Store.userInsert" />
+          <FunctionImportMapping FunctionImportName="LoginCheck" FunctionName="SellNbuyModel.Store.LoginCheck" />
+          <EntitySetMapping Name="pro_motor">
+            <EntityTypeMapping TypeName="SellNbuyModel.pro_motor">
+              <MappingFragment StoreEntitySet="pro_motor">
+                <ScalarProperty Name="checkbox" ColumnName="checkbox" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+                <ScalarProperty Name="hp" ColumnName="hp" />
+                <ScalarProperty Name="fuel" ColumnName="fuel" />
+                <ScalarProperty Name="engine" ColumnName="engine" />
+                <ScalarProperty Name="body" ColumnName="body" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="km" ColumnName="km" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="fk_cat_id" ColumnName="fk_cat_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetMotorCat" FunctionName="SellNbuyModel.Store.GetMotorCat">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SellNbuyModel.GetMotorCat_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Pro_Motor_Insert" FunctionName="SellNbuyModel.Store.Pro_Motor_Insert" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

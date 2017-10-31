@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d154e3f8-0a02-4ab0-831f-d0afee31a7ec" name="Activity1" linkedPackageId="47d7bd33-6e7c-4ddf-b07b-f5029167f5ff" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="fa85ed0d-169c-46bd-8238-62046c9bef39" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="0dee5094-c1a5-434a-af9f-2641d9e3169e" />
+        <nodes>
+          <initialNode Id="a5df2fc4-2376-4f04-89e1-9df3d30943be" name="Initial1" isLeaf="false">
+            <elementDefinition Id="91aff281-c1a9-4add-82c3-4afd3ee74546" />
+            <flowNodeTargets>
+              <controlFlow Id="7e7d9b6b-ffc5-45e3-8ca5-b3f2527612e7" isLeaf="false">
+                <callOperationActionMoniker Id="11dc50bb-ee17-4644-9b91-67515c6a2145" LastKnownName="Buyer or viewer" />
+                <elementDefinition Id="dccae30c-fd6a-46dd-9dc9-182f26afe083" />
+              </controlFlow>
+              <controlFlow Id="f17763db-d4d1-4db9-bfb2-3fa4efc77c15" isLeaf="false">
+                <callOperationActionMoniker Id="8ba68349-cdbf-4c04-a379-175e8eada6d6" LastKnownName="Admin" />
+                <elementDefinition Id="168fdbfd-f48e-4de7-887e-a8be27dcd64c" />
+              </controlFlow>
+              <controlFlow Id="8bff3aa6-02f7-4f54-98a6-3007853821de" isLeaf="false">
+                <callBehaviorActionMoniker Id="f98cd4e6-7ada-4c69-bc90-21cfefef3169" LastKnownName="Seller" />
+                <elementDefinition Id="6c376253-529e-437f-88b0-cd18d0d9f527" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <callOperationAction Id="11dc50bb-ee17-4644-9b91-67515c6a2145" name="Buyer or viewer" isLeaf="false">
+            <elementDefinition Id="5b6592f6-6d28-4852-b215-b78b4218fcc0" />
+            <flowNodeTargets>
+              <controlFlow Id="37cee4d7-8e92-4719-8f78-5013234a3941" isLeaf="false">
+                <callOperationActionMoniker Id="d4d65458-7159-4740-990e-78b6affb66b4" LastKnownName="Select Category" />
+                <elementDefinition Id="1224758e-c67b-4851-bcd0-8b0dcf91c2c3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callBehaviorAction Id="f98cd4e6-7ada-4c69-bc90-21cfefef3169" name="Seller" isLeaf="false">
+            <elementDefinition Id="0f91398f-f0c0-4131-a318-3edba1372f44" />
+            <flowNodeTargets>
+              <controlFlow Id="2885f7d2-9d16-4b0d-b649-93bf51863250" isLeaf="false">
+                <callOperationActionMoniker Id="0e1617de-44b9-4d0c-97a9-a6046aad5594" LastKnownName="User Registeration" />
+                <elementDefinition Id="35601fc6-c44f-49bc-96d8-c591766913e8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callBehaviorAction>
+          <callOperationAction Id="8ba68349-cdbf-4c04-a379-175e8eada6d6" name="Admin" isLeaf="false">
+            <elementDefinition Id="8cdcc540-1ae5-4d98-bb8f-8838d3e145aa" />
+            <flowNodeTargets>
+              <controlFlow Id="65cf72c2-2acd-4002-9d81-81aec44639a3" isLeaf="false">
+                <callOperationActionMoniker Id="a8726d81-b9f6-4b79-850a-d53db81a982d" LastKnownName="View Products" />
+                <elementDefinition Id="c4f2d0b9-d3fb-47e9-9f1e-fae04ff25b5d" />
+              </controlFlow>
+              <controlFlow Id="4e211d78-a30e-4e09-86d4-0d0932fc80d3" isLeaf="false">
+                <callOperationActionMoniker Id="14b5f1e2-aff2-4fe0-8cc2-5efea24e58de" LastKnownName="View User" />
+                <elementDefinition Id="79e62d26-19bc-4dec-82a1-9fba576c55e1" />
+              </controlFlow>
+              <controlFlow Id="2ff11008-0204-425b-a66b-7305ceff87c5" isLeaf="false">
+                <callOperationActionMoniker Id="0446709a-e23c-46ef-b851-94f7d5ac0d90" LastKnownName="View feedback" />
+                <elementDefinition Id="7bcb1efd-cd5e-4a7a-ab7f-926cee025fb4" />
+              </controlFlow>
+              <controlFlow Id="d8455963-160d-4bd7-a6b0-0f161df5e2a4" isLeaf="false">
+                <callOperationActionMoniker Id="8fceaab3-25ed-4c92-b288-9019c231d931" LastKnownName="View Spam" />
+                <elementDefinition Id="0f9e7fa6-c045-4df0-be6c-2dee3b245230" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="d4d65458-7159-4740-990e-78b6affb66b4" name="Select Category" isLeaf="false">
+            <elementDefinition Id="2dd56254-c2b1-46dd-bb4a-52388bb169b2" />
+            <flowNodeTargets>
+              <controlFlow Id="75f93eaa-d41d-4112-bec6-4540ea37dee9" isLeaf="false">
+                <callOperationActionMoniker Id="5a8372d5-e1b6-4131-8951-f7cde4c94be9" LastKnownName="Select Sub Category" />
+                <elementDefinition Id="f86e2678-340e-4286-bef3-6d5d2dde4336" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="0e1617de-44b9-4d0c-97a9-a6046aad5594" name="User Registeration" isLeaf="false">
+            <elementDefinition Id="5b490c92-11ec-4ea5-bb36-51b0f40c3a34" />
+            <flowNodeTargets>
+              <controlFlow Id="7c950cd7-ac24-47a7-9280-739268dee6aa" isLeaf="false">
+                <callOperationActionMoniker Id="923a8b67-effc-4671-a3aa-f07531d46325" LastKnownName="Chat with sellers" />
+                <elementDefinition Id="b858c31f-1fde-41db-8c37-4bda5f489ebc" />
+              </controlFlow>
+              <controlFlow Id="8eb65acb-d6cc-4b6d-9f8b-c27f8ba22791" isLeaf="false">
+                <callBehaviorActionMoniker Id="3e4e7f3d-14af-4047-9070-4abf125a22f6" LastKnownName="Terms and condition" />
+                <elementDefinition Id="aca59d2a-c3ff-4225-83a4-660dc75509e0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="5a8372d5-e1b6-4131-8951-f7cde4c94be9" name="Select Sub Category" isLeaf="false">
+            <elementDefinition Id="f4485209-da5b-4b51-8c76-7cf4bc93939a" />
+            <objectFlowTargets>
+              <objectFlow Id="61e76b0f-e983-4dff-a26d-fb217a9302e5" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="d1e78fb9-fb04-4317-bbb6-f07457889498" LastKnownName="Viewer or Buyer" />
+                <elementDefinition Id="c33b78c3-6adf-4a0a-aedb-cc467d451d57" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <callOperationAction Id="b0c4f13c-428e-4a3d-acb2-d5e35144da7b" name="Search" isLeaf="false">
+            <elementDefinition Id="07baa550-2ab8-4b8a-a506-51d63ff5921b" />
+            <flowNodeTargets>
+              <controlFlow Id="d4ede5cf-90fd-4e3c-a3e4-ed6c7b48e0a8" isLeaf="false">
+                <callOperationActionMoniker Id="f05597af-8a0d-483f-a5dd-82d0f3d5e04a" LastKnownName="View Product" />
+                <elementDefinition Id="0959cbc6-3c72-4924-ace5-924ff7a0eb09" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="f05597af-8a0d-483f-a5dd-82d0f3d5e04a" name="View Product" isLeaf="false">
+            <elementDefinition Id="c4eb8086-d612-470d-bdff-0b9ccdea45bf" />
+            <flowNodeTargets>
+              <controlFlow Id="543fd430-2431-41e6-85d5-d200fe51f4ef" isLeaf="false">
+                <callOperationActionMoniker Id="e7ddf21d-586b-45b2-b911-5c602b09bf8e" LastKnownName="Choose Product and get details" />
+                <elementDefinition Id="1a68ff78-1059-439c-894d-7bde1d67efcc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="e7ddf21d-586b-45b2-b911-5c602b09bf8e" name="Choose Product and get details" isLeaf="false">
+            <elementDefinition Id="a93e325a-699c-49ff-baf6-2fb550a12c28" />
+            <flowNodeTargets>
+              <controlFlow Id="d6e59f72-7cfd-4c3f-bf0c-5c5769f5d961" isLeaf="false">
+                <opaqueActionMoniker Id="34fd7235-334b-4042-b93e-6982b7e5c7e5" LastKnownName="Check user details" />
+                <elementDefinition Id="60929ea6-270c-40f7-beeb-0191816c4f4c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="923a8b67-effc-4671-a3aa-f07531d46325" name="Chat with sellers" isLeaf="false">
+            <elementDefinition Id="653eaa6f-8712-4a12-8500-eaee46598d3b" />
+          </callOperationAction>
+          <objectNode Id="72ad9db8-0970-4ae3-9950-50164cd79c17" name="NO" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="06b02900-e521-45c7-acb8-f673d5302ccf" />
+            <objectFlowTargets>
+              <objectFlow Id="09fec4ea-3735-4c5a-9a55-177e23e2b3c8" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callOperationActionMoniker Id="0e1617de-44b9-4d0c-97a9-a6046aad5594" LastKnownName="User Registeration" />
+                <elementDefinition Id="301e05d1-968a-402a-bde7-f2467bdaf2ee" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="227f8bae-ea19-4d20-9afc-4e6f50207d5f" name="2147483647" value="2147483647">
+                <elementDefinition Id="ed4c1969-840f-409a-aba7-b14061c2e2d8" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a3aae7c3-0a8d-49c0-a3c7-cd9cfbf9f28f" name="Yes" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="df5e3e84-2e21-4e8b-ac7d-8bbea6629daa" />
+            <objectFlowTargets>
+              <objectFlow Id="02572941-0500-4eaf-b347-698314501efe" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callOperationActionMoniker Id="923a8b67-effc-4671-a3aa-f07531d46325" LastKnownName="Chat with sellers" />
+                <elementDefinition Id="ca46e39b-f459-45b2-8c26-ce1e78bf201f" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="2af6423d-0dc6-480a-86bb-82021c7739bf" name="2147483647" value="2147483647">
+                <elementDefinition Id="c848ad22-2636-4ccf-bfe1-52cbd65cdeb0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="5945a9be-e573-4c28-903e-4d4fd02ede81" name="Add Products" isLeaf="false">
+            <elementDefinition Id="aeb2b8f4-a5e5-4917-a2f1-3849034b6d30" />
+          </callOperationAction>
+          <objectNode Id="d1e78fb9-fb04-4317-bbb6-f07457889498" name="Viewer or Buyer" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3945b172-7e12-4c86-85ab-3bc79bbdf2f1" />
+            <objectFlowTargets>
+              <objectFlow Id="e4284e13-73f8-46ad-8390-6b47ff7519cb" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callOperationActionMoniker Id="b0c4f13c-428e-4a3d-acb2-d5e35144da7b" LastKnownName="Search" />
+                <elementDefinition Id="fa53093a-59e3-4920-a0ed-f08bf4b96d32" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="799d8d62-07f6-4ff4-9f7a-7a6ec0edd504" name="2147483647" value="2147483647">
+                <elementDefinition Id="ca26dd5b-e480-41a8-abd3-b413f06185b3" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="34fd7235-334b-4042-b93e-6982b7e5c7e5" name="Check user details" isLeaf="false">
+            <elementDefinition Id="700a2c33-95d7-4b7e-ac14-9bf2d9d2e9de" />
+            <objectFlowTargets>
+              <objectFlow Id="f84b33ca-b72c-49a0-b780-cc0da2717ea0" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="72ad9db8-0970-4ae3-9950-50164cd79c17" LastKnownName="NO" />
+                <elementDefinition Id="872b7726-1740-44db-8fab-2247c52335aa" />
+              </objectFlow>
+              <objectFlow Id="6c68fb38-78af-4acc-954f-f78bba032560" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a3aae7c3-0a8d-49c0-a3c7-cd9cfbf9f28f" LastKnownName="Yes" />
+                <elementDefinition Id="ed62571f-c89e-434e-8117-aa821730096c" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <callOperationAction Id="a8726d81-b9f6-4b79-850a-d53db81a982d" name="View Products" isLeaf="false">
+            <elementDefinition Id="1e5221fd-1a1f-4b67-a8ff-b30fe977684e" />
+            <objectFlowTargets>
+              <objectFlow Id="bd9e81cc-45ed-424e-b693-23505673855e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="80a3cca7-b9e6-4b5e-8d1c-6c2d9d039e53" LastKnownName="Edit" />
+                <elementDefinition Id="7f9ffaf5-ad05-4ba3-9068-a39eefc9ecd1" />
+              </objectFlow>
+              <objectFlow Id="5fb42908-4a44-41b4-b613-81613e42a272" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="ebaacad5-e30b-44bf-bed8-c393ce32397f" LastKnownName="Delete" />
+                <elementDefinition Id="8da04ba0-afb2-48a4-a5b8-8a7cd05cd6e5" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode Id="80a3cca7-b9e6-4b5e-8d1c-6c2d9d039e53" name="Edit" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="efcf921e-e86c-4989-b241-4b4ac0d58ee8" />
+            <upperBound>
+              <literalInteger Id="541baf92-befc-4396-83fc-86543723a6c2" name="2147483647" value="2147483647">
+                <elementDefinition Id="96e6d00e-3209-4527-b7af-b90db9615566" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="ebaacad5-e30b-44bf-bed8-c393ce32397f" name="Delete" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d566fad0-4add-4292-b2b1-76fc078fae54" />
+            <upperBound>
+              <literalInteger Id="86cf786d-afc8-413b-9062-cc58073718d7" name="2147483647" value="2147483647">
+                <elementDefinition Id="3c55ad20-0b39-4487-8244-4f43e6dd6308" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="14b5f1e2-aff2-4fe0-8cc2-5efea24e58de" name="View User" isLeaf="false">
+            <elementDefinition Id="8f6eae3f-66ab-4a17-bbcc-abde8dba2465" />
+            <objectFlowTargets>
+              <objectFlow Id="f7531734-30be-4ddf-9318-043407c4de7e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="80a3cca7-b9e6-4b5e-8d1c-6c2d9d039e53" LastKnownName="Edit" />
+                <elementDefinition Id="87fb60be-9284-46c1-b1e0-8d1b8d8eb00a" />
+              </objectFlow>
+              <objectFlow Id="99e074e4-68fa-4389-8f4e-7ce729042b20" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="ebaacad5-e30b-44bf-bed8-c393ce32397f" LastKnownName="Delete" />
+                <elementDefinition Id="1656083c-7687-42c1-9698-bc511d952c8b" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <callOperationAction Id="0446709a-e23c-46ef-b851-94f7d5ac0d90" name="View feedback" isLeaf="false">
+            <elementDefinition Id="61ffe37c-7909-413d-826d-b7ed12c3f5cf" />
+            <objectFlowTargets>
+              <objectFlow Id="c4e7c890-620f-492a-a320-9299f3040a1d" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="80a3cca7-b9e6-4b5e-8d1c-6c2d9d039e53" LastKnownName="Edit" />
+                <elementDefinition Id="92401f65-dd9d-4f32-a746-155749f8bd95" />
+              </objectFlow>
+              <objectFlow Id="63b38176-429a-42ea-a4dc-54edeceaf9a6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="ebaacad5-e30b-44bf-bed8-c393ce32397f" LastKnownName="Delete" />
+                <elementDefinition Id="fedfb181-1f4b-4163-8bc4-ae959fec6b35" />
+              </objectFlow>
+              <objectFlow Id="695129e8-35b8-43d9-b139-a01fdb2072f6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="e232439a-6af1-423b-92aa-02435ae4804f" LastKnownName="Replay" />
+                <elementDefinition Id="6550b760-dcd7-472a-b991-8bd62585f358" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode Id="e232439a-6af1-423b-92aa-02435ae4804f" name="Replay" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="ea714c4e-a3e6-46b7-836b-06909cbfb675" />
+            <upperBound>
+              <literalInteger Id="bdaf7d9d-f7be-4271-b88c-5c92fd663b0a" name="2147483647" value="2147483647">
+                <elementDefinition Id="c4c16d56-225e-4995-ab03-b34f67242d66" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="8fceaab3-25ed-4c92-b288-9019c231d931" name="View Spam" isLeaf="false">
+            <elementDefinition Id="c464623b-a79c-4a41-8713-3b783dfee05b" />
+            <objectFlowTargets>
+              <objectFlow Id="59e2ad56-6d23-4510-adad-8f31a6ed0013" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="1d9765cc-c6c5-486b-b74f-597d27d09ca7" LastKnownName="Delete or block User" />
+                <elementDefinition Id="99f6b318-86b7-4184-a954-b5973a076072" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callOperationAction>
+          <objectNode Id="1d9765cc-c6c5-486b-b74f-597d27d09ca7" name="Delete or block User" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="27cc01aa-5a19-4da2-9c57-f441d149c8be" />
+            <objectFlowTargets>
+              <objectFlow Id="8513bad7-84a8-4137-a46a-df016f1622dc" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callOperationActionMoniker Id="14b5f1e2-aff2-4fe0-8cc2-5efea24e58de" LastKnownName="View User" />
+                <elementDefinition Id="675caf8f-aa70-4734-81d9-0d3699bb2402" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="40ca9c9a-441c-4529-88b4-5f65f6390e6f" name="2147483647" value="2147483647">
+                <elementDefinition Id="80bb3e2f-32a6-4e2e-ba89-c98683b31265" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callBehaviorAction Id="3e4e7f3d-14af-4047-9070-4abf125a22f6" name="Terms and condition" isLeaf="false">
+            <elementDefinition Id="f9da347d-fed1-4994-8c4f-8a41da62cb40" />
+            <objectFlowTargets>
+              <objectFlow Id="b83bd7a4-250e-4761-ba66-81033cec9b46" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="b3df4b04-b441-445c-9955-45bfa923c9db" LastKnownName="Yes" />
+                <elementDefinition Id="6b7586eb-35c9-4232-9b11-c69f2007d293" />
+              </objectFlow>
+            </objectFlowTargets>
+          </callBehaviorAction>
+          <objectNode Id="b3df4b04-b441-445c-9955-45bfa923c9db" name="Yes" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="8e76b51f-2e54-47f8-a872-92f34021b3eb" />
+            <objectFlowTargets>
+              <objectFlow Id="d42b71c4-3fc0-48d8-99b6-b46abf63cee4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <callOperationActionMoniker Id="5945a9be-e573-4c28-903e-4d4fd02ede81" LastKnownName="Add Products" />
+                <elementDefinition Id="44a97e5e-79c5-4437-811c-d7c86de6b807" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="ff76b5b9-cbe4-4f07-8b84-f59f2a89535b" name="2147483647" value="2147483647">
+                <elementDefinition Id="8bb3d2c2-c0f5-4dbd-b55f-4f9daf18b172" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="47d7bd33-6e7c-4ddf-b07b-f5029167f5ff" name="ModelingProject1">
+    <elementDefinition Id="b5ce62cb-05bd-4dab-8461-3801e45a2abc" />
+    <profileInstances>
+      <packageHasProfileInstances Id="747c9d01-cbd8-4175-9141-06529175e870">
+        <profileInstance Id="0e3c295c-0ee2-4de6-81a4-b1d7c2f2a2ce" name="TextTemplateBindings">
+          <elementDefinition Id="8fe2e880-3276-4199-a218-e612f780ea39" />
+        </profileInstance>
+        <elementDefinition Id="5ac9e860-e32b-404d-9ff3-4c76d2fb735e" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7f797584-036a-4a1c-8f57-b6763a07ff58">
+        <profileInstance Id="bf775408-cf0d-405b-bd7c-799be5afb564" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="97006947-fa5f-4899-bd64-13a7eed1b674">
+        <profileInstance Id="7d585ba7-71da-40d4-8fea-ef781c9b5743" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

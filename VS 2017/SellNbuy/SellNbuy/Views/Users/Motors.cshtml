@@ -1,0 +1,415 @@
+﻿@model BLL.Models.MotorInput
+
+@{
+    ViewBag.Title = "Motors";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<title>Resale a Business Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/bootstrap-select.css">
+<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<!-- js -->
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-select.js"></script>
+<script>
+    $(document).ready(function () {
+        var mySelect = $('#first-disabled2');
+
+        $('#special').on('click', function () {
+            mySelect.find('option:selected').prop('disabled', true);
+            mySelect.selectpicker('refresh');
+        });
+
+        $('#special2').on('click', function () {
+            mySelect.find('option:disabled').prop('disabled', false);
+            mySelect.selectpicker('refresh');
+        });
+
+        $('#basic2').selectpicker({
+            liveSearch: true,
+            maxOptions: 1
+        });
+    });
+</script>
+
+<script type="text/javascript" src="../../js/jquery.leanModal.min.js"></script>
+<link href="../../css/jquery.uls.css" rel="stylesheet" />
+<link href="../../css/jquery.uls.grid.css" rel="stylesheet" />
+<link href="../../css/jquery.uls.lcd.css" rel="stylesheet" />
+<!-- Source -->
+<script src="../../js/jquery.uls.data.js"></script>
+<script src="../../js/jquery.uls.data.utils.js"></script>
+<script src="../../js/jquery.uls.lcd.js"></script>
+<script src="../../js/jquery.uls.languagefilter.js"></script>
+<script src="../../js/jquery.uls.regionfilter.js"></script>
+<script src="../../js/jquery.uls.core.js"></script>
+<h2 class="head">Motors</h2>
+@using (@Html.BeginForm("Motors", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <section>
+
+        <div id="page-wrapper" class="sign-in-wrapper">
+            <div class="graphs">
+                <div class="sign-up">
+                    <h1>Advertising Details</h1>
+                    <p class="creating">
+                        All the below fields with * sign is mandetary for posting an add. <br />
+                        Please provide a valid mail id and phone number for confirmation.
+                    </p>
+                    <h2>Vehicle Details</h2>
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Category* :</h4>
+                        </div>
+                        <div class="sign-up2">
+                            <br />
+                            @Html.DropDownList("CatID", (SelectList)ViewData["CatID"], "-- Select Category --", new { @class = "form-control" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.CatID, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Title* :</h4>
+                        </div>
+                        <div class="sign-up2">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { placeholder = "Title" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Company* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Company, new { htmlAttributes = new { placeholder = "Company" } })
+                            @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>photo* :</h4>
+                        </div>
+                        <div class="sign-up2">
+                            <br />
+                            <input type="file" name="file1" id="file1" />
+                            <br />
+                            @Html.ValidationMessageFor(model => model.file1, "", new { @class = "text-danger" })
+                            <br />
+                            @*<h5 style="color:red;">@ViewBag.FileUpload</h5><br />*@
+                           
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>KM* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.TextBoxFor(model => model.KM)
+                            @Html.ValidationMessageFor(model => model.KM, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Year* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.TextBoxFor(model => model.Year)
+                            @Html.ValidationMessageFor(model => model.Year, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Body Condition* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Body, new { htmlAttributes = new { placeholder = "Body" } })
+                            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Engine* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Engine, new { htmlAttributes = new { placeholder = "Engine" } })
+                            @Html.ValidationMessageFor(model => model.Engine, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Fuel* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Fuel, new { htmlAttributes = new { placeholder = "fuel - (Petrol,Diesel,Gasoline....etc" } })
+                            @Html.ValidationMessageFor(model => model.Fuel, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>HP* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.HP, new { htmlAttributes = new { placeholder = "Horse Power" } })
+                            @Html.ValidationMessageFor(model => model.HP, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Phoneno* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Phoneno, new { htmlAttributes = new { placeholder = "Phone number" } })
+                            @Html.ValidationMessageFor(model => model.Phoneno, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Price* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { placeholder = "Price" } })
+                            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Description* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { placeholder = "Description" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Location* :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { placeholder = "Location of vehicle" } })
+                            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h4>Detailed description :</h4>
+                        </div>
+                        <div class="sign-up2">
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Power Window :</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.PowerWindow)
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Air Bag :</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.AirBag)
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Fog Light :</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.FoggLight)
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Nitro Pack :</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.NitroPack)
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Cool Filim:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.CoolFilim)
+
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Multi Breaking:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.MultiBraking)
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>AC:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.AC)
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Top Light:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.TopLight)
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Off Road Kit:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.OffRoadKit)
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sign-u">
+                        <div class="sign-up1">
+                            <h5>Radial Tyre:</h5>
+                        </div>
+                        <div class="sign-up2">
+
+                            @Html.CheckBoxFor(Model => Model.RadialTyre)
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                    <div class="sub_home">
+                        <div class="sub_home_left">
+
+                            <input type="submit" value="Create">
+
+                        </div>
+                        <div class="sub_home_right">
+                            <p>Go Back to <a href="@Url.Action("Home","Users")">Home</a></p>
+
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer section start-->
+        <footer class="diff">
+            <p class="text-center">&copy 2016 Resale. All Rights Reserved | Design by <a href="https://aitrich.com/" target="_blank">aitrich.com</a></p>
+        </footer>
+        <!--footer section end-->
+    </section>
+}
+
